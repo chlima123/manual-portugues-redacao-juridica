@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Português e Redação Jurídica — Guia Interativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy: #0E2A33;
+  --navy-2: #163A46;
+  --navy-3: #0A1F26;
+  --lat: #B98A2F;
+  --lat-2: #D4A94E;
+  --lat-dim: #8A6A24;
+  --papel: #F6F4EE;
+  --papel-2: #EFEBE0;
+  --papel-card: #FFFFFF;
+  --tinta: #1E2A2E;
+  --tinta-soft: #4A5B60;
+  --tinta-muted: #6B7C82;
+  --borda: #D8D2C2;
+  --borda-2: #C9C1AC;
+  --verde: #1F7D5C;
+  --verde-bg: #EAF5F0;
+  --vermelho: #A13A52;
+  --vermelho-bg: #FDF3F5;
+  --amber: #B98A2F;
+  --amber-bg: #FCF7ED;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --shadow-sm: 0 1px 3px rgba(14,42,51,.06);
+  --shadow-md: 0 4px 12px rgba(14,42,51,.08);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--papel);
+  color:var(--tinta);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--lat);color:#fff}
+
+/* ===== TOPBAR ===== */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--navy);
+  color:var(--papel);
+  border-bottom:3px solid var(--lat);
+  padding:12px 28px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  box-shadow:var(--shadow-md);
+}
+.topbar .brand{display:flex;align-items:center;gap:14px;min-width:0}
+.topbar .brand .mark{
+  font-family:var(--serif);
+  font-size:24px;
+  color:var(--lat-2);
+  font-weight:700;
+  line-height:1;
+  background:rgba(185,138,47,.15);
+  border:1px solid var(--lat);
+  width:38px;
+  height:38px;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.topbar .brand .t{
+  font-family:var(--serif);
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:.3px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.topbar .brand .t small{
+  display:block;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:1.8px;
+  color:var(--lat-2);
+  text-transform:uppercase;
+  font-weight:400;
+  margin-top:2px;
+}
+.topbar .spacer{flex:1}
+.topbar .stats-pill{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-family:var(--mono);
+  font-size:11px;
+  color:rgba(255,255,255,.75);
+  background:rgba(0,0,0,.2);
+  padding:6px 14px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.topbar .stats-pill span b{color:var(--lat-2);font-weight:600}
+.topbar .print-btn{
+  background:var(--lat);
+  color:#fff;
+  border:none;
+  padding:8px 18px;
+  border-radius:4px;
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:600;
+  cursor:pointer;
+  letter-spacing:.5px;
+  transition:background .15s, transform .1s;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.topbar .print-btn:hover{background:var(--lat-2);color:var(--navy-3)}
+.topbar .print-btn:active{transform:scale(.98)}
+
+/* ===== LAYOUT ===== */
+.layout{display:flex;min-height:calc(100vh - 65px)}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:310px;
+  flex-shrink:0;
+  background:var(--navy-2);
+  color:var(--papel);
+  border-right:1px solid var(--navy-3);
+  position:sticky;
+  top:65px;
+  height:calc(100vh - 65px);
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+}
+.sidebar .s-head{
+  padding:20px 22px 14px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.sidebar .s-head .eyebrow{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--lat-2);
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+.sidebar .s-head h2{
+  font-family:var(--serif);
+  font-size:18px;
+  font-weight:600;
+  color:#fff;
+}
+.sidebar nav{padding:14px 12px;flex:1}
+.sidebar .nav-group{margin-bottom:18px}
+.sidebar .nav-group .g-label{
+  font-family:var(--mono);
+  font-size:9.5px;
+  letter-spacing:1.8px;
+  color:rgba(255,255,255,.45);
+  text-transform:uppercase;
+  padding:4px 12px 6px;
+  display:block;
+}
+.sidebar .nav-item{
+  width:100%;
+  text-align:left;
+  background:none;
+  border:none;
+  color:rgba(255,255,255,.8);
+  padding:10px 14px;
+  border-radius:6px;
+  font-family:var(--sans);
+  font-size:13.5px;
+  font-weight:500;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:all .15s;
+  border-left:3px solid transparent;
+  margin-bottom:3px;
+}
+.sidebar .nav-item:hover{
+  background:rgba(255,255,255,.06);
+  color:#fff;
+}
+.sidebar .nav-item.active{
+  background:rgba(185,138,47,.18);
+  color:#fff;
+  border-left-color:var(--lat-2);
+  font-weight:600;
+}
+.sidebar .nav-item .icon{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--lat-2);
+  width:20px;
+  text-align:center;
+}
+.sidebar .nav-item .sub{
+  display:block;
+  font-size:11px;
+  color:rgba(255,255,255,.5);
+  font-weight:400;
+  margin-top:1px;
+}
+.sidebar .s-foot{
+  padding:16px 20px;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-family:var(--mono);
+  font-size:10px;
+  color:rgba(255,255,255,.45);
+  line-height:1.5;
+}
+
+/* ===== CONTENT ===== */
+.content{
+  flex:1;
+  max-width:1040px;
+  margin:0 auto;
+  padding:40px 36px 80px;
+  min-width:0;
+}
+
+/* ===== SECTION ===== */
+.section{display:none}
+.section.active{display:block;animation:fadeIn .25s ease-out}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+  color:var(--papel);
+  border-radius:8px;
+  padding:36px 36px 32px;
+  margin-bottom:32px;
+  border-left:5px solid var(--lat);
+  box-shadow:var(--shadow-md);
+  position:relative;
+  overflow:hidden;
+}
+.hero .eyebrow{
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:2.5px;
+  color:var(--lat-2);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:30px;
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom:12px;
+  color:#fff;
+}
+.hero .lead{
+  font-size:15.5px;
+  color:rgba(255,255,255,.88);
+  line-height:1.65;
+  max-width:820px;
+}
+.hero .meta{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.12);
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:rgba(255,255,255,.7);
+}
+.hero .meta span b{color:var(--lat-2);font-weight:600}
+
+/* ===== CARDS & BLOCKS ===== */
+.card{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  padding:24px 28px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow-sm);
+}
+.card-head{
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--papel-2);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.card-head h3{
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:600;
+  color:var(--navy);
+}
+.card-head .badge{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:1px;
+  padding:3px 8px;
+  border-radius:4px;
+  text-transform:uppercase;
+}
+
+.block{margin-bottom:28px}
+.block .b-label{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--lat);
+  text-transform:uppercase;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:600;
+}
+.block .b-label::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--borda);
+}
+
+/* ===== TREE / COMPARATIVE (VISÃO GERAL) ===== */
+.tree{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-bottom:28px;
+}
+.tree-col{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+}
+.tree-col .t-head{
+  padding:16px 20px;
+  color:#fff;
+}
+.tree-col.operacao .t-head{background:var(--navy)}
+.tree-col.metodo .t-head{background:var(--verde)}
+.tree-col .t-head h3{
+  font-family:var(--serif);
+  font-size:17px;
+  font-weight:600;
+}
+.tree-col .t-head p{
+  font-size:11px;
+  opacity:.85;
+  font-family:var(--mono);
+  letter-spacing:.5px;
+  margin-top:2px;
+}
+.tree-col .t-body{padding:20px}
+.tree-step{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  margin-bottom:16px;
+  position:relative;
+}
+.tree-step:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  left:13px;
+  top:28px;
+  bottom:-14px;
+  width:2px;
+  background:var(--borda);
+}
+.tree-step .dot{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:var(--papel-2);
+  border:2px solid var(--lat);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--navy);
+  flex-shrink:0;
+  font-weight:600;
+  z-index:1;
+}
+.tree-step .s-content h4{
+  font-family:var(--serif);
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:3px;
+}
+.tree-step .s-content p{
+  font-size:13px;
+  color:var(--tinta-soft);
+  line-height:1.55;
+}
+
+/* ===== CAPÍTULOS VIEW ===== */
+.chapter-nav-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--papel-2);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  padding:8px 14px;
+  margin-bottom:24px;
+  gap:12px;
+}
+.chapter-nav-bar .btn-nav{
+  background:var(--papel-card);
+  border:1px solid var(--borda-2);
+  color:var(--navy);
+  padding:7px 14px;
+  border-radius:4px;
+  font-family:var(--sans);
+  font-size:12.5px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .15s;
+}
+.chapter-nav-bar .btn-nav:hover{
+  background:var(--lat);
+  color:#fff;
+  border-color:var(--lat);
+}
+.chapter-nav-bar .chapter-pos{
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:600;
+  color:var(--navy);
+  letter-spacing:1px;
+}
+.chapter-quick-select{
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.chapter-quick-select button{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  padding:3px 8px;
+  font-family:var(--mono);
+  font-size:11px;
+  border-radius:3px;
+  cursor:pointer;
+  color:var(--tinta-soft);
+  transition:all .12s;
+}
+.chapter-quick-select button.active,
+.chapter-quick-select button:hover{
+  background:var(--navy);
+  color:var(--lat-2);
+  border-color:var(--navy);
+  font-weight:600;
+}
+
+.chapter-hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+  color:var(--papel);
+  border-radius:8px;
+  padding:32px 32px 28px;
+  margin-bottom:28px;
+  border-left:5px solid var(--lat);
+  box-shadow:var(--shadow-md);
+  position:relative;
+  overflow:hidden;
+}
+.chapter-hero::before{
+  content:attr(data-num);
+  position:absolute;
+  right:16px;
+  top:-20px;
+  font-family:var(--serif);
+  font-size:120px;
+  font-weight:800;
+  color:rgba(185,138,47,.09);
+  line-height:1;
+  pointer-events:none;
+  user-select:none;
+}
+.chapter-hero .parte{
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:2px;
+  color:var(--lat-2);
+  text-transform:uppercase;
+  margin-bottom:6px;
+  position:relative;
+  z-index:1;
+}
+.chapter-hero h2{
+  font-family:var(--serif);
+  font-size:24px;
+  font-weight:700;
+  line-height:1.25;
+  color:#fff;
+  position:relative;
+  z-index:1;
+}
+.chapter-hero .core{
+  margin-top:14px;
+  font-size:14.5px;
+  color:rgba(255,255,255,.9);
+  line-height:1.65;
+  position:relative;
+  z-index:1;
+  max-width:780px;
+}
+.chapter-hero .core b{color:var(--lat-2);font-weight:600}
+
+.fw-item{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-left:4px solid var(--lat);
+  border-radius:6px;
+  padding:18px 22px;
+  margin-bottom:14px;
+  box-shadow:var(--shadow-sm);
+}
+.fw-item h4{
+  font-family:var(--serif);
+  font-size:16.5px;
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:6px;
+}
+.fw-item p{
+  font-size:13.5px;
+  color:var(--tinta-soft);
+  line-height:1.65;
+}
+
+.concept-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:14px;
+}
+.concept{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  padding:16px 18px;
+  box-shadow:var(--shadow-sm);
+}
+.concept .term{
+  font-family:var(--serif);
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:6px;
+}
+.concept .def{
+  font-size:13px;
+  color:var(--tinta-soft);
+  line-height:1.55;
+}
+
+.takeaway{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  padding:14px 18px;
+  margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+}
+.takeaway .tick{
+  color:var(--verde);
+  font-weight:700;
+  font-size:16px;
+  line-height:1.3;
+  flex-shrink:0;
+}
+.takeaway p{
+  font-size:13.5px;
+  color:var(--tinta);
+  line-height:1.55;
+}
+
+.anti{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:var(--vermelho-bg);
+  border:1px solid #E8C9C4;
+  border-left:4px solid var(--vermelho);
+  border-radius:6px;
+  padding:14px 18px;
+  margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+}
+.anti .warn{
+  color:var(--vermelho);
+  font-weight:700;
+  font-size:16px;
+  line-height:1.3;
+  flex-shrink:0;
+}
+.anti p{
+  font-size:13.5px;
+  color:#6B2E3D;
+  line-height:1.55;
+}
+
+.mental-model{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:var(--amber-bg);
+  border:1px solid #EBDCB9;
+  border-left:4px solid var(--lat);
+  border-radius:6px;
+  padding:14px 18px;
+  margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+}
+.mental-model .icon{
+  font-size:16px;
+  line-height:1.3;
+  flex-shrink:0;
+}
+.mental-model p{
+  font-size:13.5px;
+  color:#6B531E;
+  line-height:1.55;
+}
+
+/* ===== GLOSSÁRIO ===== */
+.gloss-search{
+  position:relative;
+  margin-bottom:20px;
+}
+.gloss-search input{
+  width:100%;
+  padding:14px 18px 14px 44px;
+  border:1px solid var(--borda);
+  border-radius:6px;
+  font-family:var(--sans);
+  font-size:14.5px;
+  background:#fff;
+  color:var(--tinta);
+  box-shadow:var(--shadow-sm);
+  transition:all .15s;
+}
+.gloss-search input:focus{
+  outline:none;
+  border-color:var(--lat);
+  box-shadow:0 0 0 3px rgba(185,138,47,.15);
+}
+.gloss-search .icon{
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--lat);
+  font-size:16px;
+}
+.gloss-count{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--tinta-soft);
+  margin-bottom:14px;
+  font-weight:500;
+}
+.gloss-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  gap:14px;
+}
+.gloss-item{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  padding:16px 18px;
+  transition:border-color .15s, transform .1s, box-shadow .15s;
+  box-shadow:var(--shadow-sm);
+}
+.gloss-item:hover{
+  border-color:var(--lat);
+  box-shadow:var(--shadow-md);
+  transform:translateY(-1px);
+}
+.gloss-item .term{
+  font-family:var(--serif);
+  font-size:15px;
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.gloss-item .term .ch{
+  font-family:var(--mono);
+  font-size:9.5px;
+  color:var(--lat-dim);
+  background:var(--papel-2);
+  border:1px solid var(--borda-2);
+  padding:2px 6px;
+  border-radius:3px;
+  letter-spacing:.5px;
+  font-weight:600;
+  flex-shrink:0;
+}
+.gloss-item .def{
+  font-size:13px;
+  color:var(--tinta-soft);
+  line-height:1.55;
+}
+
+/* ===== TABELAS & CHEATSHEET ===== */
+.table-wrap{
+  overflow-x:auto;
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:6px;
+  box-shadow:var(--shadow-sm);
+  margin-bottom:24px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13.5px;
+}
+thead th{
+  background:var(--navy);
+  color:var(--papel);
+  text-align:left;
+  padding:12px 18px;
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  position:sticky;
+  top:0;
+  font-weight:600;
+}
+tbody td{
+  padding:12px 18px;
+  border-top:1px solid var(--borda);
+  vertical-align:top;
+  color:var(--tinta);
+  line-height:1.55;
+}
+tbody tr:nth-child(even){background:var(--papel-2)}
+tbody tr:hover{background:#EDE8DC}
+td.mono{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--lat-dim);
+  font-weight:600;
+}
+td.err{
+  color:var(--vermelho);
+  font-weight:500;
+}
+td.cor{
+  color:var(--verde);
+  font-weight:600;
+}
+
+/* ===== PADRÕES ===== */
+.pattern{
+  background:var(--papel-card);
+  border:1px solid var(--borda);
+  border-radius:8px;
+  padding:24px 28px;
+  margin-bottom:20px;
+  box-shadow:var(--shadow-sm);
+  position:relative;
+}
+.pattern .p-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:12px;
+}
+.pattern .p-head .p-num{
+  font-family:var(--serif);
+  font-size:22px;
+  color:var(--lat);
+  font-weight:700;
+  line-height:1;
+}
+.pattern .p-head h3{
+  font-family:var(--serif);
+  font-size:19px;
+  font-weight:600;
+  color:var(--navy);
+}
+.pattern .p-head .ch{
+  font-family:var(--mono);
+  font-size:10px;
+  color:var(--lat-dim);
+  background:var(--papel-2);
+  border:1px solid var(--borda-2);
+  padding:2px 8px;
+  border-radius:4px;
+  letter-spacing:.8px;
+  font-weight:600;
+  margin-left:auto;
+}
+.pattern .p-use{
+  font-size:12px;
+  font-family:var(--mono);
+  color:var(--lat-dim);
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+  font-weight:600;
+}
+.pattern p{
+  font-size:14px;
+  color:var(--tinta);
+  line-height:1.65;
+  margin-bottom:14px;
+}
+.pattern .p-trade{
+  font-size:13px;
+  color:var(--tinta-soft);
+  background:var(--papel-2);
+  border-left:3px solid var(--lat);
+  padding:12px 16px;
+  border-radius:0 4px 4px 0;
+  line-height:1.55;
+}
+.pattern .p-trade b{color:var(--navy)}
+
+/* ===== FOOTER ===== */
+.footer{
+  margin-top:54px;
+  padding-top:24px;
+  border-top:2px solid var(--lat);
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--tinta-muted);
+  line-height:1.8;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:12px;
+}
+.footer a{color:var(--lat-dim);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .layout{flex-direction:column}
+  .sidebar{
+    width:100%;
+    position:static;
+    height:auto;
+    border-right:none;
+    border-bottom:2px solid var(--lat);
+  }
+  .sidebar .s-head{padding:14px 18px 10px}
+  .sidebar nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    padding:10px 14px;
+  }
+  .sidebar .nav-group{margin-bottom:0;display:contents}
+  .sidebar .nav-group .g-label{display:none}
+  .sidebar .nav-item{
+    width:auto;
+    border-left:none;
+    border-bottom:2px solid transparent;
+    padding:8px 12px;
+    border-radius:4px;
+    margin-bottom:0;
+  }
+  .sidebar .nav-item.active{
+    border-bottom-color:var(--lat-2);
+  }
+  .sidebar .nav-item .sub{display:none}
+  .sidebar .s-foot{display:none}
+  .content{padding:28px 18px 60px}
+  .tree{grid-template-columns:1fr}
+  .topbar{padding:10px 16px}
+  .topbar .stats-pill{display:none}
+}
+@media(max-width:560px){
+  .concept-grid, .gloss-list{grid-template-columns:1fr}
+  .topbar .brand .t{font-size:13.5px}
+  .topbar .print-btn{padding:6px 10px;font-size:11px}
+}
+
+/* ===== PRINT ===== */
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{background:#fff!important;color:#000!important}
+  .topbar, .sidebar, .print-btn, .chapter-nav-bar, .gloss-search, .chapter-quick-select{display:none!important}
+  .layout{display:block}
+  .content{max-width:100%!important;padding:0!important;margin:0!important}
+  .section{display:block!important;margin-bottom:30px;page-break-after:always}
+  .card, .fw-item, .concept, .takeaway, .anti, .mental-model, .pattern, .tree-col{
+    box-shadow:none!important;
+    border:1px solid #999!important;
+    background:#fff!important;
+    color:#000!important;
+    page-break-inside:avoid;
+  }
+  .hero, .chapter-hero, .tree-col .t-head{
+    background:#fff!important;
+    color:#000!important;
+    border:2px solid #000!important;
+    box-shadow:none!important;
+  }
+  .hero h1, .chapter-hero h2, .tree-col .t-head h3{color:#000!important}
+  .hero .lead, .chapter-hero .core, .tree-col .t-head p{color:#333!important}
+  .chapter-hero::before{display:none!important}
+  thead th{
+    background:#fff!important;
+    color:#000!important;
+    border-bottom:2px solid #000!important;
+    position:static!important;
+  }
+  tbody td{border-color:#ccc!important;color:#000!important}
+  .table-wrap{
+    max-height:none!important;
+    overflow:visible!important;
+    border:1px solid #999!important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="mark">§</div>
+    <div class="t">
+      Manual de Português e Redação Jurídica
+      <small>Renato Aquino & William Douglas · 3ª ed., Impetus</small>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="stats-pill">
+    <span><b>10</b> Capítulos</span>
+    <span>•</span>
+    <span><b>32</b> Termos</span>
+    <span>•</span>
+    <span><b>6</b> Padrões</span>
+  </div>
+  <button class="print-btn" onclick="window.print()" title="Imprimir ou Salvar em PDF">
+    🖨️ Imprimir / PDF
+  </button>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="s-head">
+      <div class="eyebrow">Guia Compreensivo</div>
+      <h2>Painel Navegável</h2>
+    </div>
+    <nav>
+      <div class="nav-group">
+        <span class="g-label">Navegação Principal</span>
+        <button class="nav-item active" onclick="go('overview')" id="btn-overview">
+          <span class="icon">🏛️</span>
+          <div>
+            Visão Geral
+            <span class="sub">Tese central & estrutura</span>
+          </div>
+        </button>
+        <button class="nav-item" onclick="go('chapters')" id="btn-chapters">
+          <span class="icon">📖</span>
+          <div>
+            Capítulos (I–X)
+            <span class="sub">Navegação capítulo a capítulo</span>
+          </div>
+        </button>
+        <button class="nav-item" onclick="go('glossary')" id="btn-glossary">
+          <span class="icon">🔍</span>
+          <div>
+            Glossário
+            <span class="sub">32 conceitos & termos</span>
+          </div>
+        </button>
+        <button class="nav-item" onclick="go('cheatsheet')" id="btn-cheatsheet">
+          <span class="icon">⚡</span>
+          <div>
+            Cheatsheet
+            <span class="sub">Regras de decisão & tabelas</span>
+          </div>
+        </button>
+        <button class="nav-item" onclick="go('patterns')" id="btn-patterns">
+          <span class="icon">📐</span>
+          <div>
+            Padrões & Técnicas
+            <span class="sub">6 modelos práticos de escrita</span>
+          </div>
+        </button>
+      </div>
+    </nav>
+    <div class="s-foot">
+      Manual de Português e Redação Jurídica<br>
+      Renato Aquino & William Douglas · 2011<br>
+      Direção visual: Pauta Ministerial
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <!-- SEÇÃO 1: VISÃO GERAL -->
+    <section id="sec-overview" class="section active">
+      <div class="hero">
+        <div class="eyebrow">Doutrina & Técnica Forense</div>
+        <h1>Manual de Português e Redação Jurídica</h1>
+        <p class="lead">
+          Um guia mestre para a excelência na escrita jurídica: da formulação do raciocínio e da interpretação fática até a aplicação rigorosa da gramática, concisão, clareza e autoridade retórica.
+        </p>
+        <div class="meta">
+          <span>Autores: <b>Renato Aquino & William Douglas</b></span>
+          <span>Edição: <b>3ª ed. (Impetus, 2011)</b></span>
+          <span>Volume: <b>~492 páginas</b></span>
+          <span>Estrutura: <b>3 Partes / 18 Capítulos</b></span>
+        </div>
+      </div>
+
+      <!-- CARD TESE CENTRAL -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Tese Central: Jurisdição Intelectual & Raciocínio Antes da Escrita</h3>
+          <span class="badge" style="background:var(--navy);color:#fff">Fundamento</span>
+        </div>
+        <p style="font-size:14.5px;color:var(--tinta);line-height:1.7;margin-bottom:14px">
+          No universo jurídico, <b>todos os operadores exercem jurisdição intelectiva</b> — não apenas os magistrados. Promotores, advogados, defensores e pareceristas têm como dever diário "dizer o Direito". A resposta jurídica correta e persuasiva nasce da perfeita subsunção entre a norma abstrata e o caso fático concreto por meio da fórmula <b>Lei × Fato = Solução</b>.
+        </p>
+        <p style="font-size:14px;color:var(--tinta-soft);line-height:1.65">
+          Para alcançar a eficácia comunicativa, a ordem dos fatores é inegociável: <b>primeiro raciocinar, pesquisar e refletir, depois redigir</b>. Redigir bem é uma competência técnica desenvolvida através da leitura voraz, do domínio gramatical e da prática diária. A excelência assenta-se em quatro pilares inseparáveis: <b>Simplicidade, Clareza, Objetividade e Concisão</b>, amparadas pelo rigor da coesão e da coerência textual.
+        </p>
+      </div>
+
+      <!-- ÁRVORE DE DECISÃO: 2 COLUNAS -->
+      <div class="tree">
+        <div class="tree-col operacao">
+          <div class="t-head">
+            <h3>Fórmula Jurisdicional: Lei × Fato = Solução</h3>
+            <p>Operação Intelectual de Adequação Normativa</p>
+          </div>
+          <div class="t-body">
+            <div class="tree-step">
+              <div class="dot">1</div>
+              <div class="s-content">
+                <h4>Saber o Direito</h4>
+                <p>Domínio técnico prévio da legislação, súmulas e doutrina atualizada. Sem matéria-prima não há fundamentação possível.</p>
+              </div>
+            </div>
+            <div class="tree-step">
+              <div class="dot">2</div>
+              <div class="s-content">
+                <h4>Interpretar o Direito</h4>
+                <p>Identificar com acuidade o que foi efetivamente perguntado ou postulado, delimitando os contornos estritos da discussão.</p>
+              </div>
+            </div>
+            <div class="tree-step">
+              <div class="dot">3</div>
+              <div class="s-content">
+                <h4>Adequar o Direito ao Caso</h4>
+                <p>Multiplicação intelectual da norma ao fato concreto. Somente nesta etapa de adequação se flexibiliza a resposta.</p>
+              </div>
+            </div>
+            <div class="tree-step">
+              <div class="dot">4</div>
+              <div class="s-content">
+                <h4>Ancoragem em Fontes de Autoridade</h4>
+                <p>Subordinação da tese a precedentes pacificados e doutrina consagrada para conferir credibilidade irrefutável.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tree-col metodo">
+          <div class="t-head">
+            <h3>Método de Redação: Do Raciocínio ao Texto</h3>
+            <p>Disciplina Operacional de Produção Forense</p>
+          </div>
+          <div class="t-body">
+            <div class="tree-step">
+              <div class="dot">1</div>
+              <div class="s-content">
+                <h4>As Seis Perguntas Fundamentais</h4>
+                <p>Esgotar a dinâmica fática: quem, o quê, onde, quando, como e porquê antes de traçar a primeira linha.</p>
+              </div>
+            </div>
+            <div class="tree-step">
+              <div class="dot">2</div>
+              <div class="s-content">
+                <h4>Construção do Memento (Roteiro)</h4>
+                <p>Definir objetivo, relacionar tópicos essenciais via brainstorm com juízo crítico e estruturar início-meio-fim.</p>
+              </div>
+            </div>
+            <div class="tree-step">
+              <div class="dot">3</div>
+              <div class="s-content">
+                <h4>Redação em Ordem Direta</h4>
+                <p>Escrever com concisão e clareza, alocando a essência da resposta logo no 1º e no último parágrafo.</p>
+              </div>
+            </div>
+            <div class="tree-step">
+              <div class="dot">4</div>
+              <div class="s-content">
+                <h4>Revisão em Dois Tempos</h4>
+                <p>Primeiro: checklist vernáculo dos 10 erros clássicos. Segundo: releitura distanciada sob a ótica do julgador.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA DE ESTRUTURA DA OBRA -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Estrutura Geral da Obra (3 Partes / 18 Capítulos)</h3>
+          <span class="badge" style="background:var(--lat);color:#fff">Visão Completa</span>
+        </div>
+        <div class="table-wrap" id="estrutura-container">
+          <!-- Renderizado via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: CAPÍTULOS -->
+    <section id="sec-chapters" class="section">
+      <div class="chapter-nav-bar">
+        <button class="btn-nav" onclick="prevChapter()">← Anterior</button>
+        <div class="chapter-pos" id="chapter-pos-label">Capítulo I de X</div>
+        <div class="chapter-quick-select" id="chapter-quick-btns">
+          <!-- Gerado dinamicamente -->
+        </div>
+        <button class="btn-nav" onclick="nextChapter()">Próximo →</button>
+      </div>
+
+      <div id="chapter-view">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: GLOSSÁRIO -->
+    <section id="sec-glossary" class="section">
+      <div class="hero">
+        <div class="eyebrow">Dicionário Forense & Redacional</div>
+        <h1>Glossário de Termos e Conceitos</h1>
+        <p class="lead">
+          Consulta rápida aos 32 conceitos fundamentais de redação, gramática forense, retórica e interpretação jurídica extraídos da obra.
+        </p>
+      </div>
+
+      <div class="gloss-search">
+        <span class="icon">🔍</span>
+        <input type="text" id="gloss-input" placeholder="Buscar termo, conceito, regra ou capítulo..." autocomplete="off">
+      </div>
+      <div class="gloss-count" id="gloss-count">Exibindo 32 de 32 termos</div>
+      <div class="gloss-list" id="gloss-list">
+        <!-- Renderizado via JS -->
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: CHEATSHEET -->
+    <section id="sec-cheatsheet" class="section">
+      <div class="hero">
+        <div class="eyebrow">Guia de Bolso & Consulta Rápida</div>
+        <h1>Cheatsheet de Redação & Decisão Forense</h1>
+        <p class="lead">
+          Regras práticas de decisão, os dez erros gramaticais clássicos corrigidos, valores semânticos de conectivos e tabela de sintomas textuais.
+        </p>
+      </div>
+
+      <!-- REGRAS DE DECISÃO -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Regras de Decisão Rápida</h3>
+          <span class="badge" style="background:var(--navy);color:#fff">Diretrizes</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:30%">Situação / Desafio</th>
+                <th style="width:55%">Decisão Recomendada</th>
+                <th style="width:15%">Capítulo</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-rules">
+              <!-- Renderizado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- AS 4 QUALIDADES -->
+      <div class="card">
+        <div class="card-head">
+          <h3>As Qualidades Essenciais da Redação Jurídica</h3>
+          <span class="badge" style="background:var(--verde);color:#fff">Pilares</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:20%">Qualidade</th>
+                <th style="width:45%">Regra Prática</th>
+                <th style="width:35%">Falha a Evitar</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-qualidades">
+              <!-- Renderizado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OS 10 ERROS CLÁSSICOS -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Os 10 Erros Gramaticais Clássicos (Checklist de Revisão)</h3>
+          <span class="badge" style="background:var(--vermelho);color:#fff">Gramática</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:35%">Construção Errada</th>
+                <th style="width:35%">Construção Correta</th>
+                <th style="width:30%">Fundamento Gramatical</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-erros">
+              <!-- Renderizado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CONECTIVOS -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Conectivos e seus Valores Semânticos</h3>
+          <span class="badge" style="background:var(--lat);color:#fff">Coesão</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:20%">Valor Semântico</th>
+                <th style="width:45%">Conectivos Recomendados</th>
+                <th style="width:35%">Armadilha a Evitar</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-conectivos">
+              <!-- Renderizado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TELLS & SMELLS -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Tells & Smells (Diagnóstico de Defeitos Textuais)</h3>
+          <span class="badge" style="background:var(--navy-2);color:#fff">Diagnóstico</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:30%">Sintoma no Texto</th>
+                <th style="width:55%">Diagnóstico & Solução de Reescrita</th>
+                <th style="width:15%">Capítulo</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-tells">
+              <!-- Renderizado via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: PADRÕES -->
+    <section id="sec-patterns" class="section">
+      <div class="hero">
+        <div class="eyebrow">Playbook de Produção Textual</div>
+        <h1>Padrões & Modelos Práticos de Escrita</h1>
+        <p class="lead">
+          Seis técnicas operacionais consagradas para aplicação imediata em petições, defesas, memoriais, pareceres e provas discursivas.
+        </p>
+      </div>
+
+      <div id="patterns-list">
+        <!-- Renderizado via JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <b>Manual de Português e Redação Jurídica</b> — Renato Aquino & William Douglas (3ª ed., Impetus, 2011)
+      </div>
+      <div>
+        Dashboard interativo publicado em GitHub Pages · <a href="#sec-overview" onclick="go('overview')">Voltar ao topo ↑</a>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>
+/* ========================================================
+   DADOS EMBUTIDOS VIA PYTHON JSON DUMPS
+   ======================================================== */
+const ESTRUTURA = [
+  {
+    "parte": "Parte I",
+    "nome": "Redação Forense e Raciocínio Jurídico",
+    "desc": "Fundamentos da escrita, raciocínio antes da redação, fórmula jurisdicional Lei × Fato = Solução, técnicas de argumentação e fontes de autoridade.",
+    "caps": [
+      {
+        "num": "1",
+        "rom": "I",
+        "titulo": "A importância da redação e do português",
+        "pag": "23",
+        "foco": "Diferencial competitivo, leitura prévia, escrita como trabalho disciplinado"
+      },
+      {
+        "num": "2",
+        "rom": "II",
+        "titulo": "Antes de escrever: ler, refletir e raciocinar",
+        "pag": "35",
+        "foco": "Ordem de operação raciocínio→escrita, as 6 perguntas, pesquisa exaustiva"
+      },
+      {
+        "num": "3",
+        "rom": "III",
+        "titulo": "Raciocínio e interpretação de questões jurídicas",
+        "pag": "49",
+        "foco": "Fórmula Lei × Fato = Solução, jurisdição intelectual, erros de lei e de fato"
+      },
+      {
+        "num": "4",
+        "rom": "IV",
+        "titulo": "Redação forense e técnicas de argumentação",
+        "pag": "75",
+        "foco": "Tríade da redação, técnica do memento, revisão em 2 tempos, processo AIDA"
+      },
+      {
+        "num": "5",
+        "rom": "V",
+        "titulo": "Como se tornar um bom autor e as fontes de livros",
+        "pag": "101",
+        "foco": "Fontes de autoridade, citações, credibilidade, juízo crítico"
+      }
+    ]
+  },
+  {
+    "parte": "Parte II",
+    "nome": "Gramática Aplicada à Escrita Forense",
+    "desc": "As regras essenciais da norma culta aplicadas à linguagem jurídica: concordância, regência, crase, acentuação, ortografia, pronomes, semântica e figuras de linguagem.",
+    "caps": [
+      {
+        "num": "6",
+        "rom": "VI",
+        "titulo": "Gramática aplicada I: concordância, regência, crase, acentuação e ortografia",
+        "pag": "125",
+        "foco": "Os 10 erros clássicos, verbo haver impessoal, crase, acentuação, parônimos"
+      },
+      {
+        "num": "7",
+        "rom": "VII",
+        "titulo": "Gramática aplicada II: colocação pronominal, semântica, flexão e figuras",
+        "pag": "185",
+        "foco": "Próclise/mesóclise/ênclise, precisão vocabular, figuras de linguagem e sobriedade"
+      },
+      {
+        "num": "8–13",
+        "rom": "VI–XIII",
+        "titulo": "Módulos avançados de gramática e sintaxe forense",
+        "pag": "235",
+        "foco": "Pontuação profunda, regência nominal, estruturação de períodos compostos e novo acordo"
+      }
+    ]
+  },
+  {
+    "parte": "Parte III",
+    "nome": "Tipologia Textual, Comunicação e Prática Forense",
+    "desc": "Classificação de textos, discursos, atributos da comunicação eficaz (clareza, objetividade, concisão, coesão, coerência), modelos práticos e exercícios com gabarito.",
+    "caps": [
+      {
+        "num": "8 (KB)",
+        "rom": "VIII",
+        "titulo": "Tipologia textual e modalidades de discurso",
+        "pag": "341",
+        "foco": "Descrição (coisa), Narração (fato), Dissertação (tese); discurso direto, indireto e indireto livre"
+      },
+      {
+        "num": "9 (KB)",
+        "rom": "IX",
+        "titulo": "Comunicação: clareza, objetividade, concisão, coesão e coerência",
+        "pag": "385",
+        "foco": "As 4 qualidades, combate à prolixidade, valor semântico dos conectivos, uniformidade de tratamento"
+      },
+      {
+        "num": "10 (KB)",
+        "rom": "X",
+        "titulo": "Para escrever: compilação prática, revisão e fixação",
+        "pag": "425",
+        "foco": "Checklist de fatos gramaticais, prudência redacional, treinamento prático com gabarito"
+      },
+      {
+        "num": "14–18",
+        "rom": "XIV–XVIII",
+        "titulo": "Prática forense, modelos de peças e gabarito comentado",
+        "pag": "445",
+        "foco": "Redação oficial, modelos de petições e recursos, questões de concurso resolvidas"
+      }
+    ]
+  }
+];
+const CHAPTERS = [
+  {
+    "num": "I",
+    "chNum": 1,
+    "parte": "Parte I · Fundamentos da Redação",
+    "titulo": "A Importância da Redação e do Português",
+    "core": "Saber as regras da língua e aplicá-las corretamente é um enorme diferencial profissional em qualquer área — e, no Direito, redigir bem é quase indispensável para o sucesso. O primeiro requisito é a vontade; depois, a disciplina da leitura.",
+    "frameworks": [
+      [
+        "Escrever é um trabalho, não inspiração",
+        "A primeira condição para escrever é sentar; depois de sentar, escrever (Saramago). Redigir bem se aprende com treino diário e rotina de produção, não esperando momentos fortuitos de inspiração."
+      ],
+      [
+        "As três condições para aprender a redigir",
+        "(1) Ler muito; (2) estudar português, literatura e a matéria da prova/causa; (3) principalmente, acostumar-se a redigir — escrever sempre (redações, cartas, poesias, petições e exposições)."
+      ],
+      [
+        "Não existe bom escritor que não seja bom leitor",
+        "A leitura constante de informações relevantes e doutrina sólida é a matéria-prima essencial para o raciocínio de qualquer operador do Direito."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Diferencial competitivo",
+        "Quem escreve bem faz tudo melhor e multiplica exponencialmente suas chances de aprovação e êxito forense."
+      ],
+      [
+        "Limitação de oportunidades",
+        "Escrever mal restringe gravemente as possibilidades da carreira (petição indeferida, parecer confuso, prova discursiva zerada)."
+      ],
+      [
+        "Virtuoses vs. pessoas normais",
+        "Talentos excepcionais são raros; o espaço profissional é conquistado por quem se prepara com método e estudo disciplinado."
+      ]
+    ],
+    "takeaways": [
+      "A vontade é o requisito mais importante — e você já demonstra ao buscar dominar a técnica redacional.",
+      "Redigir bem é uma habilidade técnica treinável, não um privilégio inato.",
+      "Ler e estudar (português + matéria jurídica) são os pré-requisitos inegociáveis de quem escreve com autoridade."
+    ],
+    "anti": [
+      "Achar que aprender as regras gramaticais é perda de tempo: a pressa em ir 'direto ao ponto' destrói a base que sustenta a credibilidade do texto.",
+      "Esperar inspiração passiva em vez de sentar e produzir com método e disciplina diária."
+    ],
+    "mentalModels": [
+      "Use 'escrever é falar sem que nos interrompam' para superar o bloqueio da página em branco.",
+      "Trate as frases como sagradas: escolha as palavras com o cuidado de quem gera consequências reais na vida das pessoas."
+    ]
+  },
+  {
+    "num": "II",
+    "chNum": 2,
+    "parte": "Parte I · Fundamentos da Redação",
+    "titulo": "Antes de Escrever: Ler, Refletir e Raciocinar",
+    "core": "Antes de procurar redigir, o profissional deve aprender a pensar: a ordem é primeiro raciocinar, depois escrever. Ler, pesquisar e refletir dão o suporte e a substância que a redação jurídica exige.",
+    "frameworks": [
+      [
+        "Ordem de operação: ler → pesquisar → refletir → escrever",
+        "Nenhuma etapa desse encadeamento pode ser suprimida sem comprometer a solidez, a lógica e a clareza da peça processual ou da resposta."
+      ],
+      [
+        "Estudo integral vs. pesquisa exaustiva",
+        "Em concursos, estude todo o programa editalício; em uma causa forense, faça pesquisa exaustiva sobre o tema específico (direito material + processual). Mínimo viável: saber a lei, a doutrina e a jurisprudência dominante."
+      ],
+      [
+        "O método das seis perguntas",
+        "'Quem, o quê, onde, quando, como e porquê' — método mnemônico para esgotar a dinâmica fática e jurídica, permitindo uma abordagem completa de qualquer caso, escrito ou oral."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Ler com cautela",
+        "Em concursos, identificar o que efetivamente está sendo questionado pela banca; em casos reais, depurar o que de fato aconteceu no plano fático."
+      ],
+      [
+        "Qual é a pergunta real?",
+        "Perceber o conhecimento exato que o examinador quer testar, ou o pedido a ser formulado/contestado e os limites estritos da lide."
+      ],
+      [
+        "Coleta de informações e prazo",
+        "Ao receber uma consulta cujo tema não domina por completo, colher todos os fatos preliminares e reservar prazo para estudar o caso com profundidade."
+      ]
+    ],
+    "takeaways": [
+      "Raciocine antes de escrever: primeiro pensar, pesquisar e refletir, depois redigir.",
+      "Adote a pesquisa exaustiva para causas profissionais e o estudo sistemático completo para certames.",
+      "As seis perguntas ('quem, o quê, onde, quando, como, porquê') garantem que nenhum aspecto essencial seja omitido."
+    ],
+    "anti": [
+      "Responder sem conhecer a matéria jurídica: raciocinar no vazio sem domínio da norma é como dar pincel sem tinta.",
+      "Desconhecer o tema central ('viajar na maionese'): divagar fora do que foi perguntado anula a nota em provas e prejudica a causa."
+    ],
+    "mentalModels": [
+      "Use 'o cérebro busca o assunto nos arquivos' ao iniciar o brainstorm: a reflexão prévia ativa memórias e conexões estruturais.",
+      "Trate a leitura como alimento do raciocínio: quem lê pouco raciocina pouco."
+    ]
+  },
+  {
+    "num": "III",
+    "chNum": 3,
+    "parte": "Parte I · Raciocínio Forense",
+    "titulo": "Raciocínio e Interpretação de Questões Jurídicas",
+    "core": "Todos os profissionais do Direito 'dizem o Direito' (exercem jurisdição como atividade intelectual), não apenas os juízes. Responder corretamente uma questão jurídica é aplicar a norma abstrata ao caso concreto através da fórmula: Lei × Fato = Solução.",
+    "frameworks": [
+      [
+        "Jurisdição como atividade intelectual de todos",
+        "'Dizer o Direito' é a operação mental praticada por advogados, promotores, juízes, policiais e servidores. A marca do profissional do Direito é o rigor técnico na fundamentação dessa adequação."
+      ],
+      [
+        "Fórmula Jurisdicional: Lei × Fato = Solução",
+        "O sinal de multiplicação representa a operação intelectiva de adequação da norma abstrata ao fato concreto. Todo erro decorre de engano quanto à lei ou quanto ao fato."
+      ],
+      [
+        "Ordem lógica de abordagem em 3 passos",
+        "(1) Saber o Direito (estudo prévio); (2) Interpretar o Direito (definir o que foi pedido e os limites da discussão); (3) Adequar o Direito ao caso (apenas aqui se flexibiliza a resposta concreta)."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Erro quanto à lei",
+        "Decorre de desatualização legislativa ou jurisprudencial; exige acompanhamento sistemático de diários oficiais e súmulas."
+      ],
+      [
+        "Erro quanto ao fato",
+        "Falta de acuidade ao ler o enunciado ou os autos; supor circunstâncias não narradas ou divagar sobre hipóteses estranhas."
+      ],
+      [
+        "Acuidade",
+        "Atenção focada e objetiva à realidade dos fatos, evitando projetar sentimentos, temores ou preconceitos sobre a questão."
+      ],
+      [
+        "Declínio da causa desonesta",
+        "Recusar expressamente causas imorais ou fraudulentas — decisão ética que constrói credibilidade inabalável no longo prazo."
+      ],
+      [
+        "Questão aberta / tese controvertida",
+        "Havendo duas correntes jurídicas consolidadas, expor ambas sinteticamente no início e na conclusão da peça."
+      ]
+    ],
+    "takeaways": [
+      "Todo operador do Direito exerce jurisdição intelectiva ('dizer o Direito') — opere sempre com rigor técnico.",
+      "Aplique a fórmula Lei × Fato = Solução para manter perfeita adequação entre tipo abstrato e fato real.",
+      "Diagnostique falhas verificando se o erro foi de direito (desatualização) ou de fato (falta de acuidade).",
+      "Em teses controvertidas, mencione as duas correntes tanto no início quanto no fechamento da resposta."
+    ],
+    "anti": [
+      "Citar lei revogada ou jurisprudência superada: falha fatal que destrói a autoridade da petição ou prova.",
+      "Responder a pergunta que não foi feita: inventar teses paralelas por afobação ou apego a temas preferidos.",
+      "Encobrir o problema com erudição oca: discorrer sobre história do Direito sem resolver o problema concreto proposto."
+    ],
+    "mentalModels": [
+      "Use 'quem dita o caso é o próprio caso': limite sua argumentação estritamente aos contornos da lide posta.",
+      "Use 'diagnóstico erro de lei vs erro de fato' para identificar a raiz de qualquer insuficiência argumentativa."
+    ]
+  },
+  {
+    "num": "IV",
+    "chNum": 4,
+    "parte": "Parte I · Prática de Redação",
+    "titulo": "Redação Forense e Técnicas de Argumentação",
+    "core": "Ler e redigir são faces do mesmo fenômeno de comunicação humana. Saber estruturar uma resposta escrita conduz a uma excelente sustentação oral e vice-versa. As três condições mestras: ler muito, estudar a matéria e escrever diariamente.",
+    "frameworks": [
+      [
+        "As 3 condições mestras para redigir bem",
+        "(1) Ler muito; (2) estudar português, literatura e a matéria da causa/prova; (3) acostumar-se a redigir — escrever com disciplina diária, de despachos a peças complexas."
+      ],
+      [
+        "A autoestrada cérebro-mão-caneta-papel",
+        "Trilha neural que se transforma, mediante treino contínuo, em conexão rápida e fluida para produção de qualquer gênero de texto."
+      ],
+      [
+        "Revisão sistemática em dois tempos",
+        "Primeiro: releitura técnica corrigindo vernáculo, regência e pontuação. Segundo: releitura com o distanciamento crítico do juiz ou examinador. Ideal: redigir hoje e revisar amanhã."
+      ],
+      [
+        "Estrutura da resposta em 4 parágrafos",
+        "Modelo canônico para questões controvertidas: §1 Divergência → §2 Tese A → §3 Tese B → §4 Fecho fundamentado."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Cuidados materiais da redação",
+        "Caligrafia legível, rigor gramatical, asseio do documento, emprego consciente de rascunhos, fundamentação legal e assinatura."
+      ],
+      [
+        "Palavras mágicas / Latinismos",
+        "Expressões consagradas (lato sensu, mutatis mutandis) utilizadas com parcimônia para dar precisão, sem cair no pedantismo."
+      ],
+      [
+        "Gestão do tempo de prova",
+        "Fracionar o tempo disponível por questão e planejar a pesquisa com antecedência nas causas profissionais."
+      ],
+      [
+        "Técnicas de argumentação",
+        "Utilização das seis perguntas para fundamentar a causa de pedir e rebater os argumentos adversos."
+      ]
+    ],
+    "takeaways": [
+      "A gente só aprende a escrever escrevendo: a prática deliberada é o único atalho real.",
+      "Releia o texto com o olhar severo do julgador, nunca com a complacência da intenção autoral.",
+      "Nas questões abertas, garanta a essência da resposta logo no primeiro e no último parágrafo.",
+      "Administre o tempo de forma estrita, reservando fração mandatória para a revisão final."
+    ],
+    "anti": [
+      "Entrega de texto com rasuras e correções visíveis que prejudicam a legibilidade e a estética.",
+      "Deixar a redação para a última hora, suprimindo o tempo necessário de burilamento e reflexão.",
+      "Revisão passiva: passar os olhos recordando o que pretendia escrever em vez de ler o que realmente está grafado."
+    ],
+    "mentalModels": [
+      "A resposta essencial deve constar no primeiro e no último parágrafo da exposição.",
+      "Todo texto possui início, meio e fim harmônicos como espinha dorsal inegociável."
+    ]
+  },
+  {
+    "num": "V",
+    "chNum": 5,
+    "parte": "Parte I · Autoria e Autoridade",
+    "titulo": "Como se Tornar um Bom Autor e as Fontes de Livros",
+    "core": "Um bom autor não nasce pronto: escrever bem é resultado de leitura disciplinada, treino diário e domínio rigoroso da gramática. A credibilidade do texto jurídico decorre de ancorá-lo em fontes de autoridade reconhecidas.",
+    "frameworks": [
+      [
+        "A tríade do autor consistente",
+        "(1) Ler muito e tudo sobre a temática; (2) estudar a fundo a língua e a disciplina jurídica; (3) escrever todos os dias — 'a primeira condição para escrever é sentar'."
+      ],
+      [
+        "Ancoragem em fontes de autoridade",
+        "Subordinar cada tese levantada a precedentes qualificados, súmulas vinculantes e doutrina hegemônica para conferir poder de convencimento irrefutável."
+      ],
+      [
+        "Juízo crítico e poda textual",
+        "Auditar cada parágrafo anotado no memento: verificar se tem conexão direta com a lide e cortar impiedosamente afirmações duvidosas."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Credibilidade forense",
+        "Um texto ancorado em fontes oficiais e respeitadas convence de imediato, enquanto a opinião isolada desperta ceticismo."
+      ],
+      [
+        "Citação precisa",
+        "Referenciar autores e julgados com exatidão, extraindo o princípio aplicável sem truncar o sentido original."
+      ],
+      [
+        "Atualização permanente",
+        "Acompanhar a dinâmica legislativa e as viragens jurisprudenciais para nunca sustentar posição superada."
+      ]
+    ],
+    "takeaways": [
+      "Escreva diariamente para transformar o ato de redigir em hábito natural e seguro.",
+      "Fundamente cada argumento nuclear em fontes de autoridade consolidadas.",
+      "Aplique juízo crítico implacável e elimine qualquer assertiva que não possa defender formalmente."
+    ],
+    "anti": [
+      "Emitir opinião estritamente pessoal e desprovida de sustentação normativa ou pretoriana.",
+      "Citar autores revogados ou julgados isolados contrários à jurisprudência pacificada do tribunal."
+    ],
+    "mentalModels": [
+      "Escrever é trabalho artesanal e disciplinado, não dádiva mística de inspiração.",
+      "Pense nas frases como anjos ou demônios que você liberta no mundo jurídico: cada palavra gera efeitos concretos."
+    ]
+  },
+  {
+    "num": "VI",
+    "chNum": 6,
+    "parte": "Parte II · Gramática Aplicada",
+    "titulo": "Gramática Aplicada I: Concordância, Regência, Crase, Acentuação e Ortografia",
+    "core": "Para escrever bem é obrigatório conhecer e aplicar corretamente as regras gramaticais. Este capítulo reúne os erros mais comuns de concordância, regência, crase, acentuação, ortografia, hífen e pontuação — com as correções práticas.",
+    "frameworks": [
+      [
+        "Concordância verbal com verbos impessoais",
+        "O verbo haver (no sentido de existir ou tempo decorrido) e fazer (tempo) não admitem sujeito: permanecem rigorosamente no singular ('Houve discussões', nunca 'Houveram')."
+      ],
+      [
+        "Concordância nominal de frações",
+        "O adjetivo concorda com o núcleo substantivo em gênero e número ('Já era meio-dia e meia', concordando com 'meia hora')."
+      ],
+      [
+        "Regência verbal na norma culta",
+        "Respeitar a preposição canônica exigida pelo verbo ('Assistimos a um espetáculo', 'Aspirar ao cargo', 'Visar ao objetivo')."
+      ],
+      [
+        "Crase como fusão prévia (a + a)",
+        "Só ocorre crase quando há simultaneamente a preposição 'a' e o artigo feminino 'a' (ou pronome 'aquele'). Não há crase entre palavras repetidas ('frente a frente')."
+      ],
+      [
+        "Acentuação e ortografia oficial",
+        "Domínio das regras de tonicidade oficial, grafia correta (exceção, ascensão) e pontuação de termos intercalados."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Haver impessoal",
+        "Invariável na 3ª pessoa do singular quando sinônimo de existir, acontecer ou indicar tempo."
+      ],
+      [
+        "Meio-dia e meia",
+        "A forma 'meia' é adjetivo fracionário que concorda com a palavra subentendida 'hora'."
+      ],
+      [
+        "Tonicidade gráfica",
+        "Regras obrigatórias de oxítonas terminadas em A, E, O, Em, paroxítonas e todas as proparoxítonas."
+      ],
+      [
+        "Maiúsculas institucionais",
+        "Grafia com inicial maiúscula para órgãos públicos e termos canônicos (Receita Federal, Poder Judiciário)."
+      ]
+    ],
+    "takeaways": [
+      "O verbo 'haver' impessoal é invariável e permanece no singular em qualquer tempo ou conjugação.",
+      "Teste prático da crase: substitua a palavra feminina por masculina; se virar 'ao', ocorre crase.",
+      "Mantenha a concordância rigorosa entre o núcleo da oração e seus modificadores.",
+      "Diferencie homófonos e parônimos pelo sentido semântico exato (vultosa ≠ vultuosa)."
+    ],
+    "anti": [
+      "Houveram novas discussões — erro crasso de concordância com verbo impessoal.",
+      "Ficaram frente à frente — crase indevida entre vocábulos repetidos sem artigo.",
+      "Me disseram a verdade — próclise em início absoluto de frase sem palavra atrativa.",
+      "Quantia vultuosa — confusão entre vultoso (volumoso) e vultuoso (rosto inchado/congesto)."
+    ],
+    "mentalModels": [
+      "O verbo haver impessoal é sempre singular: acione o alarme mental ao cogitar flexioná-lo.",
+      "Crase = preposição + artigo feminino: sem ambos, o acento grave é inadmissível."
+    ]
+  },
+  {
+    "num": "VII",
+    "chNum": 7,
+    "parte": "Parte II · Gramática Aplicada",
+    "titulo": "Gramática Aplicada II: Colocação Pronominal, Semântica, Flexão e Figuras",
+    "core": "Além das regras básicas, o bom redator domina a colocação dos pronomes oblíquos, o uso preciso das palavras (semântica), as flexões nominal e verbal, e as figuras de linguagem que conferem nobreza e expressividade ao texto forense.",
+    "frameworks": [
+      [
+        "Tríade da colocação pronominal",
+        "Próclise (antes do verbo), Mesóclise (no meio do verbo, com futuros do presente/pretérito sem atração) e Ênclise (após o verbo). Em abertura de oração usa-se ênclise; palavras atrativas impõem a próclise."
+      ],
+      [
+        "Precisão semântica forense",
+        "Discriminação cirúrgica entre parônimos e homônimos (ratificar = confirmar; retificar = corrigir; vultoso = volumoso; vultuoso = inchado)."
+      ],
+      [
+        "Flexão nominal e verbal",
+        "Concordância de gênero/número e domínio da conjugação de verbos irregulares e anômalos no pretérito e subjuntivo."
+      ],
+      [
+        "Figuras de linguagem com sobriedade",
+        "Metáfora, metonímia, hipérbole, eufemismo, pleonasmo e ironia usados como instrumentos comedidos de persuasão judiciária."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Próclise mandatória",
+        "Atraída por palavras de sentido negativo (não, nunca), pronomes relativos (que, quem), conjunções subordinativas e advérbios."
+      ],
+      [
+        "Ênclise canônica",
+        "Posição padrão quando o verbo inicia a oração ou após pausa pontuada ('Disseram-me os autos...')."
+      ],
+      [
+        "Palavras atrativas",
+        "Termos gramaticais dotados de força atrativa que impedem a ênclise na norma culta formal."
+      ],
+      [
+        "Sobriedade retórica",
+        "Uso estritamente controlado de recursos estilísticos para não obscurecer a clareza técnica do arrazoado."
+      ]
+    ],
+    "takeaways": [
+      "Aplique a colocação pronominal respeitando as atrações gramaticais e a vedação de próclise em início de frase.",
+      "Consulte o dicionário antes de grafar parônimos semelhantes na petição.",
+      "Utilize figuras de linguagem com parcimônia no ambiente forense, prestigiando a clareza e a lógica."
+    ],
+    "anti": [
+      "Próclise em início de período ('Me parece que...') em textos judiciais formais.",
+      "Troca paronímica involuntária (ex.: retificar pedido quando pretendia ratificá-lo).",
+      "Excesso de metáforas floridas que mascaram a ausência de subsunção jurídica consistente."
+    ],
+    "mentalModels": [
+      "Semântica = sentido cirúrgico: não arrisque termos aproximados cujo significado exato desconhece.",
+      "Próclise com atração, ênclise no início: a bússola rápida para colocação pronominal segura."
+    ]
+  },
+  {
+    "num": "VIII",
+    "chNum": 8,
+    "parte": "Parte III · Tipologia Textual",
+    "titulo": "Tipologia Textual: Descrição, Narração, Dissertação e Discursos",
+    "core": "Todo texto pertence a um tipo — descrição, narração ou dissertação — conforme seu centro de gravidade. Reconhecer e dominar cada tipo é fundamental para estruturar a peça adequada a cada fase processual.",
+    "frameworks": [
+      [
+        "Tríade tipológica fundamental",
+        "Descrição (centrada no objeto/pessoa; fotografia estática), Narração (centrada no fato/acontecimento; filme temporal), Dissertação (centrada em ideias/opiniões; debate e tese)."
+      ],
+      [
+        "Modalidades de discurso",
+        "Discurso Direto (diálogo com dois-pontos e travessão), Discurso Indireto (incorporação da fala com 'que'/'se'), Discurso Indireto Livre (fusão das vozes sem marcas gráficas)."
+      ],
+      [
+        "Predominância e hibridismo tipológico",
+        "Textos reais combinam descrição e narração (relatório), mas subordinam-se à dissertação predominante (fundamentação)."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Descrição física e psicológica",
+        "Retrato detalhado de atributos materiais ou estados anímicos de pessoas e coisas."
+      ],
+      [
+        "Elementos da narrativa forense",
+        "Personagens (sujeitos da lide), enredo/ação (fatos ocorridos), tempo (quando), espaço (onde) e narrador."
+      ],
+      [
+        "Dissertação argumentativa",
+        "Defesa estruturada de uma tese jurídica mediante argumentos lógicos concatenados para convencer o julgador."
+      ],
+      [
+        "Marcas formais do discurso",
+        "Pontuação canônica (aspas, travessões, dois-pontos) e orações subordinadas substantivas."
+      ]
+    ],
+    "takeaways": [
+      "Identifique o tipo pelo centro de interesse: coisa (descrição), fato (narração), tese (dissertação).",
+      "Distinga os três discursos pelas marcas formais e mantenha a consistência da narrativa testemunhal.",
+      "Preserve a fidelidade à estrutura do gênero exigido pela banca ou pelo rito processual."
+    ],
+    "anti": [
+      "Desviar-se da tipologia solicitada (ex.: dissertar sobre segurança pública quando a banca exigiu narrar a dinâmica do flagrante).",
+      "Misturar indevidamente marcas de discurso direto e indireto no mesmo depoimento ou parágrafo."
+    ],
+    "mentalModels": [
+      "Descrição = fotografia; Narração = filme em movimento; Dissertação = sustentação de tese.",
+      "Quando convocado a redigir em determinado gênero, não se desvie da sua estrutura formal."
+    ]
+  },
+  {
+    "num": "IX",
+    "chNum": 9,
+    "parte": "Parte III · Qualidades da Redação",
+    "titulo": "Comunicação: Clareza, Objetividade, Concisão, Coesão e Coerência",
+    "core": "A boa comunicação escrita combina simplicidade, clareza, objetividade e concisão, sustentadas por coesão (ligação gramatical perfeita) e coerência (sentido lógico substantivo). Sem concisão não há boa redação; prolixidade é o vício capital a eliminar.",
+    "frameworks": [
+      [
+        "As 4 qualidades mestras da redação",
+        "Simplicidade (vocabulário acessível), Clareza (compreensão instantânea), Objetividade (dizer direto sem voltinhas), Concisão (dizer o máximo com o mínimo de palavras)."
+      ],
+      [
+        "Binômio estrutural Coesão & Coerência",
+        "Coesão é a amarração sintática entre os elementos (conectivos e anáforas); Coerência é a consistência lógica e a ausência de contradições internas."
+      ],
+      [
+        "Princípio da Uniformidade de Tratamento",
+        "Manutenção estrita da pessoa gramatical: optar por 'tu' (2ª pessoa) ou 'você'/'senhor' (3ª pessoa) do início ao fim, ajustando todos os oblíquos e possessivos correspondentes."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Prolixidade como defeito capital",
+        "Uso desmedido de palavras vazias e circunlóquios que cansam o leitor e obscurecem a tese."
+      ],
+      [
+        "Valor semântico dos conectivos",
+        "Emprego exato de conjunções conforme o nexo pretendido: conclusivo (portanto, pois pós-posto), adversativo (porém), concessivo (conquanto, embora), causal (visto que)."
+      ],
+      [
+        "Anáfora e catáfora",
+        "Mecanismos de referência interna; o mau posicionamento do pronome gera ambiguidade e quebra a coesão textual."
+      ]
+    ],
+    "takeaways": [
+      "Prefira vocabulário acessível e direto: clareza é a maior virtude da redação jurídica.",
+      "Seja rigorosamente conciso: corte advérbios supérfluos, orações intercaladas vazias e inversões artificiais.",
+      "Garanta coesão e coerência utilizando conectivos alinhados ao seu valor semântico exato.",
+      "Mantenha uniformidade de tratamento pronominal sem alternar pessoas gramaticais no mesmo texto."
+    ],
+    "anti": [
+      "Troca do valor de conectivos (ex.: usar 'porquanto' [causal] pretendendo expressar concessão ['conquanto']).",
+      "Quebra de coerência interna (ex.: 'Não obstante a perda do processo, o advogado comemorou a vitória').",
+      "Misturar 'tu' e 'você' na mesma peça processual (violação da uniformidade de tratamento).",
+      "Preciosismo pedante: empregar arcaísmos para aparentar erudição, sacrificando a inteligibilidade."
+    ],
+    "mentalModels": [
+      "Coesão = ligação gramatical; Coerência = harmonia lógica do raciocínio.",
+      "Sem concisão não há boa redação: elimine todo vocábulo que não acrescente significado ao pedido."
+    ]
+  },
+  {
+    "num": "X",
+    "chNum": 10,
+    "parte": "Parte III · Prática e Fixação",
+    "titulo": "Para Escrever: Compilação Prática, Revisão e Exercícios",
+    "core": "Este capítulo consolida as regras e os cuidados finais para a produção escrita: aplicar os fatos gramaticais constantemente, evitar os erros mais comuns e treinar com exercícios. É o guia prático que amarra a gramática às técnicas de redação forense.",
+    "frameworks": [
+      [
+        "A gramática como estrutura viva da peça",
+        "Os fatos gramaticais não são teoria estéril, mas a engrenagem que confere segurança, rigor e autoridade técnica ao texto jurídico."
+      ],
+      [
+        "Protocolo de checklist de revisão",
+        "Auditoria sistemática das dez categorias clássicas de erros antes de protocolar a petição ou entregar a prova discursiva."
+      ],
+      [
+        "Prática deliberada com gabarito",
+        "Resolução ativa de exercícios práticos com conferência de gabarito comentado para fixação definitiva das estruturas corretas."
+      ],
+      [
+        "Princípio da prudência redacional",
+        "Na dúvida sobre a regência de um verbo ou o valor de um conectivo, reformular a frase em ordem direta simples."
+      ]
+    ],
+    "conceitos": [
+      [
+        "Fatos gramaticais recorrentes",
+        "Concordância verbal/nominal, regência, crase, acentuação, ortografia, colocação pronominal, maiúsculas, semântica e pontuação."
+      ],
+      [
+        "Posição canônica do 'pois'",
+        "A conjunção 'pois' só possui valor conclusivo quando colocada estritamente após o verbo; antes do verbo, tem valor causal/explicativo."
+      ],
+      [
+        "Reescrita como método",
+        "Aperfeiçoar períodos prolixos cortando redundâncias e alinhando os elementos sintáticos em ordem direta."
+      ]
+    ],
+    "takeaways": [
+      "Revise ativamente todos os fatos gramaticais em cada parágrafo antes da entrega final.",
+      "Emparelhe cada conectivo exatamente ao seu valor semântico normativo.",
+      "Treine continuamente com exercícios práticos e gabaritos comentados para internalizar as regras.",
+      "Na menor dúvida gramatical ou semântica, pesquise a norma ou reformule a frase de modo simples."
+    ],
+    "anti": [
+      "Permitir que afirmações duvidosas ou fatos não confirmados permaneçam no arrazoado final.",
+      "Insistir em construções sintáticas truncadas quando uma formulação simples resolveria com clareza.",
+      "Negligenciar o treinamento prático e a resolução de exercícios de fixação."
+    ],
+    "mentalModels": [
+      "Não corra riscos com construções duvidosas: na dúvida, simplifique e adote a ordem direta.",
+      "A língua portuguesa oferece inúmeras opções: sempre há um modo mais elegante e seguro de expressar a ideia."
+    ]
+  }
+];
+const GLOSSARY = [
+  [
+    "Acuidade",
+    "Atenção cirúrgica e objetiva à realidade do caso, para não projetar sentimentos, sonhos, temores ou preferências subjetivas sobre a questão jurídica.",
+    "3"
+  ],
+  [
+    "AIDA",
+    "Processo mnemônico para exposições orais e sustentações: criar no ouvinte, nesta ordem psicológica, Atenção, Interesse, Desejo e Ação.",
+    "4"
+  ],
+  [
+    "Anáfora",
+    "Mecanismo coesivo de retomada de um termo anterior do texto; seu emprego incorreto gera ambiguidade e quebra de nexo sintático.",
+    "9"
+  ],
+  [
+    "Clareza",
+    "Qualidade mestra de um texto que é perfeitamente compreensível logo na primeira leitura, fundamentada em vocabulário acessível e ordem direta.",
+    "1, 9"
+  ],
+  [
+    "Coesão",
+    "Perfeita ligação gramatical e encadeamento conectivo entre os elementos constituintes de frases, períodos e parágrafos.",
+    "9"
+  ],
+  [
+    "Coerência",
+    "Harmonia substantiva e sentido lógico inquestionável do texto, garantindo ausência de contradições internas entre premissas e conclusão.",
+    "9"
+  ],
+  [
+    "Concisão",
+    "Capacidade de dizer muito com poucas e exatas palavras; reunião de clareza e objetividade. Sem concisão não há boa redação forense.",
+    "9"
+  ],
+  [
+    "Concordância nominal",
+    "Regra pela qual o adjetivo, pronome ou numeral concorda em gênero e número com o substantivo núcleo (ex.: meio-dia e meia).",
+    "6"
+  ],
+  [
+    "Concordância verbal",
+    "Regra pela qual o verbo se flexiona em número e pessoa em harmonia com o sujeito gramatical (ex.: houve discussões, não 'houveram').",
+    "6"
+  ],
+  [
+    "Crase",
+    "Fusão fonética da preposição 'a' com o artigo definido feminino 'a' ou com pronomes demonstrativos (aquele, aquela, aquilo).",
+    "6"
+  ],
+  [
+    "Descrição",
+    "Tipo textual centrado no ser, no objeto ou na pessoa, detalhando pormenores, atributos e características como uma fotografia estática.",
+    "8"
+  ],
+  [
+    "Discurso direto",
+    "Reprodução literal da fala do personagem no diálogo, indicada formalmente por dois-pontos e travessão ou aspas.",
+    "8"
+  ],
+  [
+    "Discurso indireto",
+    "Incorporação da fala do personagem às palavras do narrador por meio de orações subordinadas com conjunções 'que' ou 'se'.",
+    "8"
+  ],
+  [
+    "Discurso indireto livre",
+    "Fusão estilística total das vozes do narrador e do personagem na narrativa, sem marcas gráficas formais de diálogo.",
+    "8"
+  ],
+  [
+    "Dissertação",
+    "Tipo textual centrado na transmissão, reflexão e defesa de ideias, teses e opiniões mediante argumentos lógicos e persuasivos.",
+    "8"
+  ],
+  [
+    "Ênclise",
+    "Colocação do pronome oblíquo átono após o verbo, mandatória no início absoluto de orações e após pausas pontuadas (ex.: disseram-me).",
+    "6, 7"
+  ],
+  [
+    "Figuras de linguagem",
+    "Recursos estilísticos e expressivos (metáfora, metonímia, hipérbole, eufemismo, pleonasmo, ironia) usados com moderação no foro.",
+    "7"
+  ],
+  [
+    "Flexão nominal",
+    "Variação morfológica de gênero (masculino/feminino), número (singular/plural) e grau em substantivos e adjetivos.",
+    "7"
+  ],
+  [
+    "Flexão verbal",
+    "Variação morfológica de número, pessoa, tempo, modo e voz nas formas verbais da oração.",
+    "7"
+  ],
+  [
+    "Jurisdição",
+    "'Dizer o Direito'; operação intelectiva de adequação da norma abstrata ao caso concreto exercida por todos os operadores jurídicos.",
+    "3"
+  ],
+  [
+    "Lei × Fato = Solução",
+    "Fórmula mestra do raciocínio forense: a multiplicação intelectual que expressa a subsunção da norma abstrata à realidade fática.",
+    "3"
+  ],
+  [
+    "Memento",
+    "Esquema simplificado (roteiro) para organizar a exposição escrita ou oral sem dependência de rascunhos extensos.",
+    "4"
+  ],
+  [
+    "Narração",
+    "Tipo textual centrado no fato ou acontecimento que se desenrola no tempo e no espaço, protagonizado por personagens.",
+    "8"
+  ],
+  [
+    "Objetividade",
+    "Postura redacional de ir direto ao cerne da questão, eliminando desvios, rodeios e a 'voltinha' que cansa o julgador.",
+    "9"
+  ],
+  [
+    "Palavra atrativa",
+    "Vocábulo dotado de força atrativa que impõe a próclise do pronome oblíquo (palavras negativas, relativos, conjunções subordinativas, advérbios).",
+    "7"
+  ],
+  [
+    "Prolixidade",
+    "Defeito redacional consistente no uso excessivo de palavras para transmitir pouca substância; o vício oposto à concisão.",
+    "9"
+  ],
+  [
+    "Próclise",
+    "Colocação do pronome oblíquo átono antes da forma verbal, obrigatória na presença de palavras atrativas na norma culta.",
+    "6, 7"
+  ],
+  [
+    "Regência",
+    "Relação sintática de subordinação em que um verbo (regência verbal) ou nome (regência nominal) exige determinada preposição.",
+    "6"
+  ],
+  [
+    "Semântica",
+    "Ramo dos estudos linguísticos dedicado ao sentido exato, aos valores contextuais e às nuances de significado dos vocábulos.",
+    "7"
+  ],
+  [
+    "Simplicidade",
+    "Emprego de vocabulário acessível e direto de comunicação geral, repudiando o preciosismo pedante e o rebuscamento inútil.",
+    "9"
+  ],
+  [
+    "Tipologia textual",
+    "Estudo e categorização das estruturas fundamentais de texto conforme a finalidade comunicativa: descrição, narração e dissertação.",
+    "8"
+  ],
+  [
+    "Uniformidade de tratamento",
+    "Regra de consistência gramatical pela qual se mantém o tratamento por 'tu' (2ª pessoa) ou 'você' (3ª pessoa) com pronomes alinhados até o fim.",
+    "9"
+  ]
+];
+const RULES = [
+  [
+    "Abordagem de qualquer questão jurídica",
+    "Aplicar a fórmula Lei × Fato = Solução em 3 etapas: saber → interpretar → adequar ao caso",
+    "CH 3"
+  ],
+  [
+    "Questão discursiva com duas correntes",
+    "Expor ambas as teses de forma sucinta logo no 1º parágrafo e arrematar no último",
+    "CH 3, 4"
+  ],
+  [
+    "Ordem mandatória antes de redigir",
+    "Seguir estritamente o ciclo: ler → pesquisar → refletir → escrever (nunca pular etapas)",
+    "CH 2"
+  ],
+  [
+    "Esgotamento integral de um caso forense",
+    "Aplicar o método das 6 perguntas: quem, o quê, onde, quando, como e porquê",
+    "CH 2, 4"
+  ],
+  [
+    "Superação do bloqueio da página em branco",
+    "Internalizar o modelo mental: 'escrever é falar sem que nos interrompam'",
+    "CH 1"
+  ],
+  [
+    "Estruturação de resposta em 4 parágrafos",
+    "Adotar o roteiro canônico: divergência → tese favorável → tese contrária → conclusão",
+    "CH 4"
+  ],
+  [
+    "Exposição oral e sustentação em tribuna",
+    "Conduzir a fala pelo processo AIDA: Atenção → Interesse → Desejo → Ação",
+    "CH 4"
+  ],
+  [
+    "Protocolo de revisão sistemática",
+    "Realizar revisão em dois tempos: correção vernácula técnica e leitura com olhar do julgador",
+    "CH 4, 10"
+  ],
+  [
+    "Tratamento pronominal em petições",
+    "Manter uniformidade absoluta: 'tu' (2ª pessoa) ou 'você'/'senhor' (3ª pessoa) do início ao fim",
+    "CH 9"
+  ],
+  [
+    "Dúvida sobre conectivo ou regência",
+    "Adotar a prudência redacional: pesquisar na fonte ou reescrever a oração em ordem direta",
+    "CH 10"
+  ]
+];
+const QUALIDADES = [
+  [
+    "Simplicidade",
+    "Vocabulário acessível e direto de comunicação geral",
+    "Vocabulário artificialmente rebuscado / pedantismo oco"
+  ],
+  [
+    "Clareza",
+    "Garantir compreensão instantânea logo na primeira leitura",
+    "Frases truncadas, ambiguidades e inversões sintáticas"
+  ],
+  [
+    "Objetividade",
+    "Ir direto ao ponto da questão sem rodeios introdutórios",
+    "A 'voltinha' desnecessária e circunlóquios que cansam"
+  ],
+  [
+    "Concisão",
+    "Dizer o máximo de conteúdo com o mínimo de palavras",
+    "Prolixidade, repetições e pleonasmos viciosos"
+  ],
+  [
+    "Coesão",
+    "Encadear frases com conectivos e anáforas gramaticais exatas",
+    "Mau uso de conjunções e pronomes sem referente claro"
+  ],
+  [
+    "Coerência",
+    "Manter harmonia lógica e sentido inquestionável entre premissas",
+    "Contradições internas e quebra de nexo causal/concessivo"
+  ]
+];
+const ERROS = [
+  [
+    "Houveram novas discussões sobre o tema",
+    "Houve novas discussões sobre o tema",
+    "Concordância verbal (haver impessoal permanece no singular)"
+  ],
+  [
+    "Já era meio-dia e meio quando saiu",
+    "Já era meio-dia e meia quando saiu",
+    "Concordância nominal (concorda com 'meia hora')"
+  ],
+  [
+    "Assistimos um belo espetáculo forense",
+    "Assistimos a um belo espetáculo forense",
+    "Regência verbal (assistir no sentido de presenciar exige 'a')"
+  ],
+  [
+    "Ficaram frente à frente na audiência",
+    "Ficaram frente a frente na audiência",
+    "Crase (não ocorre crase entre vocábulos repetidos)"
+  ],
+  [
+    "Quero falar com voce sobre o processo",
+    "Quero falar com você sobre o processo",
+    "Acentuação gráfica (oxítona terminada em 'e')"
+  ],
+  [
+    "Não há excessão para a regra legal",
+    "Não há exceção para a regra legal",
+    "Ortografia (grafia oficial com 'c' e 'ç')"
+  ],
+  [
+    "Me disseram a verdade dos fatos",
+    "Disseram-me a verdade dos fatos",
+    "Colocação pronominal (ênclise mandatória em início de período)"
+  ],
+  [
+    "a receita federal autuou a empresa",
+    "a Receita Federal autuou a empresa",
+    "Emprego de maiúsculas em órgãos públicos institucionais"
+  ],
+  [
+    "O autor recebeu quantia vultuosa",
+    "O autor recebeu quantia vultosa",
+    "Semântica (vultoso = grande/avultado; vultuoso = inchado)"
+  ],
+  [
+    "Aquele documento, infelizmente é falso",
+    "Aquele documento, infelizmente, é falso",
+    "Pontuação (adjunto adverbial intercalado isolado por vírgulas)"
+  ]
+];
+const CONECTIVOS = [
+  [
+    "Conclusivo",
+    "portanto, por conseguinte, logo, então, pois (estritamente posposto ao verbo)",
+    "Usar 'pois' antes do verbo como conclusivo (antes do verbo, 'pois' é causal)"
+  ],
+  [
+    "Adversativo",
+    "porém, contudo, todavia, no entanto, entretanto, mas",
+    "Pontuação falha ou confundir oposição real com concessão"
+  ],
+  [
+    "Concessivo",
+    "embora, conquanto, ainda que, se bem que, não obstante, apesar de que",
+    "Confundir 'conquanto' (concessivo) com 'porquanto' (causal)"
+  ],
+  [
+    "Causal",
+    "porque, porquanto, visto que, já que, uma vez que, como (no início)",
+    "Trocar conectivos causais por conclusivos ou concessivos"
+  ]
+];
+const TELLS = [
+  [
+    "Texto difícil, denso e cansativo",
+    "Excesso de rebuscamento e carência de concisão; simplificar o léxico e cortar orações intercaladas vazias",
+    "9"
+  ],
+  [
+    "Parágrafo com sentido truncado ou contraditório",
+    "Conectivo empregado com valor semântico trocado (ex: porquanto por conquanto); auditar nexos lógicos",
+    "9, 10"
+  ],
+  [
+    "Ambiguidade sobre qual sujeito praticou o ato",
+    "Anáfora quebrada ou pronome relativo distante do substantivo antecedente; reorganizar em ordem direta",
+    "9"
+  ],
+  [
+    "Frase soando 'estranha' em prova discursiva",
+    "Erro clássico de concordância com verbo impessoal (haver/fazer) ou próclise indevida em abertura",
+    "6, 7"
+  ],
+  [
+    "Resposta jurídica que parece incompleta",
+    "Falta de método mnemônico prévio; aplicar as 6 perguntas e estruturar início-meio-fim harmônicos",
+    "2, 4"
+  ],
+  [
+    "Sensação de fragilidade ou insegurança jurídica",
+    "Falta de citação de fontes de autoridade (súmulas vinculantes, doutrina dominante); ancorar os argumentos",
+    "3, 5"
+  ]
+];
+const PATTERNS = [
+  [
+    "Memento / Roteiro Estruturado",
+    "Organizar a exposição escrita ou oral sem rascunhos longos; em provas de concursos, petições iniciais, memoriais, pareceres, palestras e sustentações orais.",
+    "(1) Definir o objetivo com precisão cirúrgica (o que foi perguntado ou o que o julgador necessita acolher); (2) Relacionar os pontos essenciais (tempestade cerebral + juízo crítico + vincular a fontes de autoridade); (3) Definir estrutura sólida início-meio-fim; (4) Executar com segurança (treinar, escrever, falar). Nas provas, garanta a essência no 1º e último parágrafo.",
+    "Dispensa folhas de rascunho extensas e previne omissões graves de teses, mas exige treino prévio para memorização do esquema em provas sem consulta.",
+    "CH 4, 10"
+  ],
+  [
+    "Processo AIDA (Exposição Oral & Sustentação)",
+    "Sustentações orais em tribunais, plenário do júri, audiências de instrução, palestras jurídicas, defesas de teses e aulas acadêmicas.",
+    "Conduzir o ouvinte, rigorosamente nesta ordem psicológica: (1) Atenção (gancho forte e exórdio que desperta interesse de imediato); (2) Interesse (apresentação clara do conflito e das teses em jogo); (3) Desejo (demonstração da justiça e conveniência da solução postulada); (4) Ação (pedido claro, firme e fecho memorável na peroração).",
+    "Garante alto poder de engajamento e persuasão do auditório, mas exige planejamento minucioso e rigoroso controle do tempo de fala.",
+    "CH 4"
+  ],
+  [
+    "Fórmula Jurisdicional: Lei × Fato = Solução",
+    "Responder a qualquer consulta jurídica, questão discursiva de concurso, parecer institucional ou elaboração de petição forense.",
+    "(1) Saber o Direito (estudo técnico prévio e atualização com leis/súmulas); (2) Interpretar o Direito (delimitar o pedido e os limites estritos da pergunta); (3) Adequar o Direito ao caso (realizar a multiplicação intelectual entre o tipo normativo abstrato e a dinâmica fática concreta). Só na adequação ocorre a flexibilização técnica.",
+    "Assegura perfeita pertinência e impede o desvio temático ('viajar na maionese'), mas pressupõe conhecimento técnico atualizado e acuidade de leitura.",
+    "CH 3"
+  ],
+  [
+    "Roteiro de Resposta em 4 Parágrafos (Questões Controvertidas)",
+    "Provas discursivas e práticas de concursos jurídicos (Magistratura, Ministério Público, Defensoria) diante de temas com divergência pretoriana.",
+    "Estruturar a resposta em 4 blocos harmônicos: (1) §1 - Introdução indicando a existência de divergência doutrinária e jurisprudencial relevante; (2) §2 - Exposição da primeira corrente com seus fundamentos específicos e gerais; (3) §3 - Exposição da corrente oposta com suas razões constitucionais/legais; (4) §4 - Conclusão sintética posicionando a solução fundamentada.",
+    "Garante completude analítica e maximiza a pontuação perante qualquer examinador, mas exige poder de síntese e estrita gestão de linhas e tempo.",
+    "CH 4"
+  ],
+  [
+    "Diagnóstico Sistemático de Erros Gramaticais",
+    "Revisão final de petições, recursos, pareceres, memoriais e redações de certames antes do protocolo ou entrega formal.",
+    "Varrer o texto auditando as dez categorias clássicas de erros: concordância verbal (haver impessoal), concordância nominal (meio-dia e meia), regência verbal/nominal, crase, acentuação gráfica, ortografia oficial, colocação pronominal (vedada próclise em abertura), maiúsculas institucionais, semântica contextual e pontuação intercalada.",
+    "Elimina os erros materiais que destroem a credibilidade técnica do profissional perante juízes e bancas examinadoras.",
+    "CH 6, 7, 10"
+  ],
+  [
+    "Correção de Coesão e Coerência Textual",
+    "Diagnóstico e reescrita de parágrafos truncados, períodos prolixos ou com conectivos empregados em desacordo com o nexo semântico.",
+    "(1) Auditar o valor semântico de cada conjunção (conclusivo, adversativo, concessivo, causal); (2) Checar se anáforas e pronomes retomam os antecedentes corretos sem ambiguidade; (3) Cortar orações inúteis que criam 'voltinhas' desnecessárias; (4) Na dúvida, aplicar a ordem direta simples (Sujeito + Verbo + Complemento).",
+    "Restaura a inteligibilidade e a elegância lógica do arrazoado forense, embora exija desapego a construções excessivamente floreadas.",
+    "CH 9, 10"
+  ]
+];
+
+/* ===== NAVEGAÇÃO DE SEÇÕES ===== */
+function go(secId){
+  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+  document.querySelectorAll(".sidebar .nav-item").forEach(b=>b.classList.remove("active"));
+  
+  const sec = document.getElementById("sec-" + secId);
+  const btn = document.getElementById("btn-" + secId);
+  if(sec) sec.classList.add("active");
+  if(btn) btn.classList.add("active");
+  
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* ===== ESTRUTURA DA OBRA (TABELA) ===== */
+function renderEstrutura(){
+  let html = '<table><thead><tr><th style="width:15%">Parte</th><th style="width:25%">Capítulo / Título</th><th style="width:10%">Pág.</th><th style="width:50%">Foco Temático</th></tr></thead><tbody>';
+  ESTRUTURA.forEach(p=>{
+    p.caps.forEach((c, idx)=>{
+      html += '<tr>';
+      if(idx === 0){
+        html += `<td rowspan="${p.caps.length}" style="background:var(--papel-2);font-weight:700;color:var(--navy)"><b>${p.parte}</b><br><small style="font-weight:400;color:var(--tinta-soft)">${p.nome}</small></td>`;
+      }
+      html += `<td><b>Cap. ${c.num}</b> — ${c.titulo}</td>`;
+      html += `<td class="mono">p. ${c.pag}</td>`;
+      html += `<td>${c.foco}</td>`;
+      html += '</tr>';
+    });
+  });
+  html += '</tbody></table>';
+  document.getElementById("estrutura-container").innerHTML = html;
+}
+
+/* ===== CAPÍTULOS VIEW ===== */
+let curChapterIdx = 0;
+
+function buildChapterQuickBtns(){
+  const container = document.getElementById("chapter-quick-btns");
+  container.innerHTML = CHAPTERS.map((c, i)=>
+    `<button id="qbtn-${i}" onclick="renderChapter(${i})" title="Capítulo ${c.num}">${c.num}</button>`
+  ).join("");
+}
+
+function renderChapter(i){
+  if(i < 0) i = 0;
+  if(i >= CHAPTERS.length) i = CHAPTERS.length - 1;
+  curChapterIdx = i;
+  
+  const c = CHAPTERS[i];
+  document.getElementById("chapter-pos-label").textContent = `Capítulo ${c.num} de X (${c.chNum}/10)`;
+  
+  document.querySelectorAll(".chapter-quick-select button").forEach((b, idx)=>{
+    b.classList.toggle("active", idx === i);
+  });
+  
+  const fwHtml = c.frameworks.map(f=>
+    `<div class="fw-item">
+      <h4>${f[0]}</h4>
+      <p>${f[1]}</p>
+    </div>`
+  ).join("");
+  
+  const concHtml = c.conceitos.map(k=>
+    `<div class="concept">
+      <div class="term">${k[0]}</div>
+      <div class="def">${k[1]}</div>
+    </div>`
+  ).join("");
+  
+  const tkHtml = c.takeaways.map(t=>
+    `<div class="takeaway">
+      <span class="tick">✓</span>
+      <p>${t}</p>
+    </div>`
+  ).join("");
+  
+  const antiHtml = c.anti.map(a=>
+    `<div class="anti">
+      <span class="warn">⚠</span>
+      <p>${a}</p>
+    </div>`
+  ).join("");
+  
+  let mmHtml = "";
+  if(c.mentalModels && c.mentalModels.length > 0){
+    mmHtml = `<div class="block">
+      <div class="b-label">Modelos Mentais & Diretrizes de Aplicação</div>
+      ${c.mentalModels.map(m=>`<div class="mental-model"><span class="icon">💡</span><p>${m}</p></div>`).join("")}
+    </div>`;
+  }
+  
+  document.getElementById("chapter-view").innerHTML = `
+    <div class="chapter-hero" data-num="${c.num}">
+      <div class="parte">${c.parte}</div>
+      <h2>Capítulo ${c.num} — ${c.titulo}</h2>
+      <p class="core"><b>Ideia Central.</b> ${c.core}</p>
+    </div>
+    
+    <div class="block">
+      <div class="b-label">Frameworks & Princípios Estruturantes</div>
+      ${fwHtml}
+    </div>
+    
+    <div class="block">
+      <div class="b-label">Conceitos-Chave</div>
+      <div class="concept-grid">
+        ${concHtml}
+      </div>
+    </div>
+    
+    ${mmHtml}
+    
+    <div class="block">
+      <div class="b-label">Pontos de Retenção (Key Takeaways)</div>
+      ${tkHtml}
+    </div>
+    
+    <div class="block">
+      <div class="b-label">Anti-Padrões & Armadilhas a Evitar</div>
+      ${antiHtml}
+    </div>
+  `;
+}
+
+function prevChapter(){
+  const nextIdx = (curChapterIdx - 1 + CHAPTERS.length) % CHAPTERS.length;
+  renderChapter(nextIdx);
+}
+
+function nextChapter(){
+  const nextIdx = (curChapterIdx + 1) % CHAPTERS.length;
+  renderChapter(nextIdx);
+}
+
+/* ===== GLOSSÁRIO ===== */
+function renderGlossary(q){
+  q = (q || "").trim().toLowerCase();
+  const filtered = GLOSSARY.filter(g =>
+    !q || g[0].toLowerCase().includes(q) || g[1].toLowerCase().includes(q) || g[2].toLowerCase().includes(q)
+  );
+  
+  document.getElementById("gloss-count").textContent = `Exibindo ${filtered.length} de ${GLOSSARY.length} termos`;
+  
+  document.getElementById("gloss-list").innerHTML = filtered.map(g =>
+    `<div class="gloss-item">
+      <div class="term">
+        <span>${g[0]}</span>
+        <span class="ch">CH ${g[2]}</span>
+      </div>
+      <div class="def">${g[1]}</div>
+    </div>`
+  ).join("");
+}
+
+/* ===== CHEATSHEET & TABELAS ===== */
+function renderTables(){
+  document.getElementById("tbl-rules").innerHTML = RULES.map(r=>
+    `<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td class="mono">${r[2]}</td></tr>`
+  ).join("");
+  
+  document.getElementById("tbl-qualidades").innerHTML = QUALIDADES.map(q=>
+    `<tr><td><b>${q[0]}</b></td><td>${q[1]}</td><td style="color:var(--vermelho)">${q[2]}</td></tr>`
+  ).join("");
+  
+  document.getElementById("tbl-erros").innerHTML = ERROS.map(e=>
+    `<tr><td class="err">${e[0]}</td><td class="cor">${e[1]}</td><td>${e[2]}</td></tr>`
+  ).join("");
+  
+  document.getElementById("tbl-conectivos").innerHTML = CONECTIVOS.map(c=>
+    `<tr><td><b>${c[0]}</b></td><td style="font-weight:500">${c[1]}</td><td style="color:var(--tinta-soft)">${c[2]}</td></tr>`
+  ).join("");
+  
+  document.getElementById("tbl-tells").innerHTML = TELLS.map(t=>
+    `<tr><td><b style="color:var(--vermelho)">${t[0]}</b></td><td>${t[1]}</td><td class="mono">CH ${t[2]}</td></tr>`
+  ).join("");
+}
+
+/* ===== PADRÕES ===== */
+function renderPatterns(){
+  document.getElementById("patterns-list").innerHTML = PATTERNS.map((p, idx)=>
+    `<div class="pattern">
+      <div class="p-head">
+        <span class="p-num">${String(idx + 1).padStart(2, "0")}</span>
+        <h3>${p[0]}</h3>
+        <span class="ch">${p[4]}</span>
+      </div>
+      <div class="p-use">Quando usar — ${p[1]}</div>
+      <p>${p[2]}</p>
+      <div class="p-trade"><b>Trade-offs & Cuidados:</b> ${p[3]}</div>
+    </div>`
+  ).join("");
+}
+
+/* ===== INICIALIZAÇÃO ===== */
+document.addEventListener("DOMContentLoaded", ()=>{
+  renderEstrutura();
+  buildChapterQuickBtns();
+  renderChapter(0);
+  renderGlossary("");
+  renderTables();
+  renderPatterns();
+  
+  // Busca no glossário com input listener
+  const glossInput = document.getElementById("gloss-input");
+  if(glossInput){
+    glossInput.addEventListener("input", e=>renderGlossary(e.target.value));
+  }
+  
+  // Atalhos de teclado ← → com guarda de foco
+  document.addEventListener("keydown", e=>{
+    if(e.key === "ArrowLeft" || e.key === "ArrowRight"){
+      if(document.activeElement && (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA")) return;
+      if(!document.getElementById("sec-chapters").classList.contains("active")) return;
+      if(e.key === "ArrowRight") nextChapter();
+      else prevChapter();
+    }
+  });
+});
+</script>
+</body>
+</html>
